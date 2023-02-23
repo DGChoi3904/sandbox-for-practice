@@ -17,6 +17,69 @@
   </ul>
   <script>
     let menu = document.getElementById("menu");
+    //1차 솔루션
+    /*
+    for(let i = 0 ; i < menu.children.length ; i++ ) {
+      menu.children[i].style.color = "blue";
+    }
+    */
+    //2차 솔루션
+    /*
+    for(let i = 0 ; i < menu.childElementCount ; i++ ) {
+      menu.children[i].style.color = "blue";
+    }
+    */
+    //3차 솔루션
+    /*
+    for(let i = 0 ; i < menu.childNodes.length ; i++ ) {
+      if(menu.childNodes[i].nodeType != Element.prototype.TEXT_NODE) {
+        menu.childNodes[i].style.color = "blue";
+      }  
+    }
+    */
+    //4차 솔루션
+    /*
+    for(let i = 0 ; i < menu.childNodes.length ; i++ ) {
+      if(menu.childNodes[i].nodeName == "LI") {
+        menu.childNodes[i].style.color = "blue";
+      }  
+    }
+    */
+    //5차 솔루션
+    /*
+    if(menu.firstElementChild && menu.firstElementChild.nodeName == "LI"){
+      let li = menu.firstElementChild;
+      //li에 값이 null이 아닐경우 true로 인식, 스타일을 적용후 li의 값을 다음형제요소로 배정한다. null이 되면 false로 인식하여 탈출한다.
+      //변수에 0이 아닌 다른 값이 설정되어 있을 경우, boolean의 true 속성을 띈다. (boolean의 경우 숫자로 하면 false의 경우 0의 값을, true의 경우 1의 값을 가진다.)
+      //null은 undefined와 달리 boolean의 false값을 가진다.
+      //다음 형제 요소가 없을경우, nextElementSibling은 null의 값을 가진다.
+      
+      //undefined와 null. 
+      // undefined의 경우 선언되지 않아 존재하지 않는 경우의 상황을 위해 부여되는 허수값이다.
+      // null의 경우 선언은 되었으나 어떠한 값도 할당되지 않을 때 부여되는 허수값이며 객체이다. 이 경우 어떠한 값도 가지지 않은 대신 boolean의 false 속성을 가진다.
+      // 비교 연산자(==)의 경우 서로를 비교할시 true를 반환하나, 동일성 비교 연산자(===)의 경우 false를 반환한다.
+      
+      while(li){
+        li.style.color = "blue";
+        li =  li.nextElementSibling;
+      }
+        
+    }
+    */
+    //6차 솔루션
+    /*
+    let li = menu.getElementsByTagName("li");
+    for(let i = 0; i < li.length; i++ ) {
+      li[i].style.color = "blue";
+    }
+    */
+    //7차 솔루션
+    /*
+    for(let i = 0; i < menu.querySelectorAll("li").length; i++) {
+      menu.querySelectorAll("li")[i].style.color = "blue";
+    }
+    */
+    //8차 솔루션
   </script>
 </body>
 </html>
