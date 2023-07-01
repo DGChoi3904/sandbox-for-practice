@@ -1,0 +1,19 @@
+{
+  "name": "sandbox-for-practice",
+  "version": "0.0.1",
+  "description": "NestJS 연습",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGChoi3904/sandbox-for-practice.git"
+  },
+  "author": "DGChoi3904",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGChoi3904/sandbox-for-practice/issues"
+  },
+  "homepage": "https://github.com/DGChoi3904/sandbox-for-practice#readme"
+}
