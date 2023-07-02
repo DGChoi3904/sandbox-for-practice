@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DGChoi3904/sandbox-for-practice#readme",
   "dependencies": {
-    "@nestjs/cli": "^10.1.0"
+    "@nestjs/cli": "^10.1.0",
+    "@nestjs/mapped-types": "*"
   }
 }
